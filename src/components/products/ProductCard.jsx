@@ -54,6 +54,14 @@ const TextContainer = styled.div`
   // backdrop-filter: blur(2px);
   // width: 100%;
   padding: 20px;
+  
+  visibility: none; opacity: 0;
+  transition: opacity 0.3s;
+
+  :hover{
+    visibility: visible; opacity: 1;
+    transition: opacity 0.5s;
+  }
 `;
 const AddButton = styled.div`
   position: absolute;
@@ -95,4 +103,6 @@ const Subtitle = styled.p`
   font-size: 15px;
   color: #ffff;
   margin: 0px;
+
+
 `;
