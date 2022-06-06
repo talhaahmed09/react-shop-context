@@ -6,13 +6,17 @@ const Cart = () => {
   const {products,total} = useShop();
 
   return (
-    <div>
-  <Title>Your cart Total is {total}.00$</Title>
+    <>
+    <Title>Your cart Total is {total}.00$</Title>
+    <ProductsWrapper>
+
 
   {products.map((product,i) => (
     <ProductCard key={i} {...product} />
   ))}
-  </div>
+
+  </ProductsWrapper>
+  </>
   );
 };
 
@@ -22,4 +26,11 @@ const Title = styled.p`
   font-weight: bold;
   font-size: 20px;
   margin-top: 20px;
+`;
+
+const ProductsWrapper = styled.div`
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
 `;
