@@ -11,7 +11,7 @@ const Cart = () => {
     <ProductsWrapper>
 
 
-  {products.map((product,i) => (
+  {products && products.map((product,i) => (
     <ProductCard key={i} {...product} />
   ))}
 
